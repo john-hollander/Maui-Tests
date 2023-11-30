@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iOSFillTest.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Column1" Width="0.01*" />
+                <ColumnDefinition x:Name="Column2" Width="0.99*" />
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.ColumnSpan="2" Fill="Red" />
+            <Rectangle Fill="Blue" />
+        </Grid>
+        
+        <Button x:Name="TestBtn" Grid.Row="3" Grid.Column="1" Text="Test" 
+                Clicked="OnTestClicked" HorizontalOptions="Fill" />
+    </Grid>
+
+</ContentPage>
