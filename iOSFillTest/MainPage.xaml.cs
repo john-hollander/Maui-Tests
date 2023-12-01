@@ -9,8 +9,7 @@
 
         private void OnTestClicked(object sender, EventArgs e)
         {
-            Column1.Width = new(1, GridUnitType.Star);
-            Column2.Width = new(0, GridUnitType.Star);
+            TestCtrl.Progress = 1;
         }
     }
 
