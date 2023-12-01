@@ -9,7 +9,7 @@
 
         private void OnTestClicked(object sender, EventArgs e)
         {
-            TestCtrl.Progress = 1;
+            TestCtrl.SetFull();
         }
     }
 

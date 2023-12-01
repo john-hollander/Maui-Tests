@@ -7,8 +7,8 @@
             <ColumnDefinition x:Name="colDone" Width="0.01*" />
             <ColumnDefinition x:Name="colLeft" Width="0.99*" />
         </Grid.ColumnDefinitions>
-        <Rectangle Grid.ColumnSpan="2" StrokeThickness="1" Stroke="White" BackgroundColor="Gray" />
-        <Rectangle BackgroundColor="#FFFFE040" Scale="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <Rectangle Grid.ColumnSpan="2" Background="Gray" />
+        <Rectangle Background="Red" />
     </Grid>
 </ContentView>
 
