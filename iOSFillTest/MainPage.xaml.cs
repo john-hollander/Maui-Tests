@@ -9,7 +9,7 @@
 
         private void OnTestClicked(object sender, EventArgs e)
         {
-            colDone.Width = new GridLength(1, GridUnitType.Star);
+            colDone.Width = new GridLength(8, GridUnitType.Star);
             colLeft.Width = new GridLength(0, GridUnitType.Star);
         }
     }
