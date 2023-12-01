@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:u="clr-namespace:iOSFillTest"
              x:Class="iOSFillTest.MainPage">
 
     <Grid>
@@ -16,9 +15,16 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="8*" />
             <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>        
 
-        <u:TestControl x:Name="TestCtrl" Grid.Row="1" Grid.Column="1" />
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="colDone" Width="0.01*" />
+                <ColumnDefinition x:Name="colLeft" Width="0.99*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="2" Background="Gray" />
+            <Rectangle Background="Yellow" />
+        </Grid>
         
         <Button x:Name="TestBtn" Grid.Row="3" Grid.Column="1" Text="Test" 
                 Clicked="OnTestClicked" HorizontalOptions="Fill" />

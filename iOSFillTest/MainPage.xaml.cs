@@ -9,8 +9,8 @@
 
         private void OnTestClicked(object sender, EventArgs e)
         {
-            TestCtrl.SetFull();
+            colDone.Width = new GridLength(1, GridUnitType.Star);
+            colLeft.Width = new GridLength(0, GridUnitType.Star);
         }
     }
-
 }
