@@ -4,6 +4,10 @@
              x:Class="IDrawableFontTest.MainPage">
 
     <Grid>
-        <GraphicsView x:Name="view" />
+        <GraphicsView x:Name="view">
+            <GraphicsView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="HandleTapped"/>
+            </GraphicsView.GestureRecognizers>
+        </GraphicsView>
     </Grid>
 </ContentPage>
