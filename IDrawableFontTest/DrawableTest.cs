@@ -40,7 +40,7 @@
                 fontFamily = "Cinzel";
 
             font = new(fontFamily);
-            font = new("Arial");
+            //font = new("Arial");  // To test default.
 
             // Get the size to display the text at 120 points.
             size = canvas.GetStringSize(text, font, 120f, HorizontalAlignment.Center, VerticalAlignment.Center);
@@ -55,6 +55,7 @@
                                  rect.Top + (rect.Height - size.Height) / 2,
                                  size.Width, size.Height);
 
+            // To keep the font from overflowing (because MeasureText isn't exact, it seems).
             canvas.FontSize = fontSize * 0.9921f;
 
             canvas.StrokeColor = Colors.Blue;
