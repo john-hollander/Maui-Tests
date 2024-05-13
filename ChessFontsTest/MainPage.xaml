@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessFontsTest.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="gChessFonts" RadioButtonGroup.GroupName="chessFonts" Margin="0,2,0,0">
+            <RadioButton FontFamily="Chess Adventurer" FontSize="35"  Content="kQrBnP" Value="adven" />
+            <RadioButton FontFamily="Chess Merida" FontSize="35" Content="kQrBnP" Value="merid" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
