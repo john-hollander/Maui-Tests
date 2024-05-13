@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewInsertTest"
+             x:Class="ListViewInsertTest.MainPage">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="TestTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid>
+                            <Label Text="{Binding Text}" TextColor="Black" />
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="10*" />
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="view" Grid.Row="1" Grid.ColumnSpan="3" 
+                  Background="LightGray" ItemTemplate="{StaticResource TestTemplate}" />
+
+        <Button Grid.Column="0" Text="Add" Clicked="AddClicked" />
+        <Button Grid.Column="2" Text="Remove" Clicked="RemoveClicked" />
+    </Grid>
+
+</ContentPage>
