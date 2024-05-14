@@ -4,20 +4,19 @@ namespace ListViewInsertTest
 {
     public partial class MainPage : ContentPage
     {
-        public ObservableCollection<ListItem> TestItems { get; } = [];
+        public ObservableCollection<string> TestItems { get; } = [];
 
         public MainPage()
         {
             InitializeComponent();
-
             view.ItemsSource = TestItems;
         }
 
         private void AddClicked(object sender, EventArgs e)
         {
-            TestItems.Add(new ListItem("Test 1"));
-            TestItems.Insert(1, new ListItem("Test 3"));
-            TestItems.Insert(1, new ListItem("Test 2"));
+            TestItems.Add("Test 1");
+            TestItems.Insert(1, "Test 3");
+            TestItems.Insert(1, "Test 2");
         }
 
         private void RemoveClicked(object sender, EventArgs e)
