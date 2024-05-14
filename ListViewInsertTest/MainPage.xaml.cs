@@ -15,7 +15,7 @@ namespace ListViewInsertTest
         private void AddClicked(object sender, EventArgs e)
         {
             TestItems.Add("Test 1");
-            TestItems.Insert(1, "Test 3");
+            TestItems.Add("Test 3");
             TestItems.Insert(1, "Test 2");
         }
 
